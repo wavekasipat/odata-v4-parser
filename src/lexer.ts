@@ -289,7 +289,7 @@ export namespace Lexer {
         else if (Utils.equals(value, index, "%29")) return index + 3;
     }
     // unreserved ALPHA / DIGIT / "-" / "." / "_" / "~"
-    export function unreserved(value: number): boolean { return Lexer.ALPHA(value) || Lexer.DIGIT(value) || value === 0x2d || value === 0x2e || value === 0x5f || value === 0x7e; }
+    export function unreserved(value: number): boolean { return Lexer.ALPHA(value) || Lexer.DIGIT(value) || value === 0x2d || value === 0x2e || value === 0x5f || value === 0x7e || value > 0E00; }
     // other-delims "!" /                   "(" / ")" / "*" / "+" / "," / ";"
     export function otherDelims(value: Utils.SourceArray, index: number): number {
         if (value[index] === 0x21 || value[index] === 0x2b) return index + 1;
