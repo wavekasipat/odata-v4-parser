@@ -3,5 +3,5 @@ src/*.js
 coverage
 docs
 report
-lib
+# lib
 *.log*
